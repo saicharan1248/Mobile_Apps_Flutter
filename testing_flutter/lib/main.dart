@@ -4,12 +4,23 @@ void main() {
   runApp(const MyApp());
 }
 
+void test(List<String>? names) {
+  final int length;
+  if (names != null) {
+    length = names.length;
+    print(length);
+  } else {
+    print('No data');
+  }
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    test(['saachi', 'sai', 'charan']);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -106,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'You have pushed the button this many times dude:',
             ),
             Text(
               '$_counter',
